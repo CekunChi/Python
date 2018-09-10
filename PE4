@@ -31,3 +31,13 @@ for i in range(1000):
         l.append(i * j)
 
 print(sorted(list(filter(is_palin,l)))[-1])
+
+
+#-------------------------------
+l = []
+for i in range(1000):
+    for j in range(1000):
+        l.append(i * j)
+
+print(sorted(list(filter(lambda x : str(x) == str(x)[::-1],l)))[-1])
+#list 有reversed方法,list.reversed
