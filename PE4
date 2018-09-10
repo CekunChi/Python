@@ -22,7 +22,7 @@ for i in range(100, 1000):
 
 print (ans)
 
-#--------------------------
+#--------------------------------------------------------------
 def is_palin(n):
     return str(n) == str(n)[::-1]
 l = []
@@ -33,11 +33,31 @@ for i in range(1000):
 print(sorted(list(filter(is_palin,l)))[-1])
 
 
-#-------------------------------
+#---------------------------------------------------------------------
 l = []
 for i in range(1000):
     for j in range(1000):
         l.append(i * j)
 
 print(sorted(list(filter(lambda x : str(x) == str(x)[::-1],l)))[-1])
-#list 有reversed方法,list.reversed
+
+#list 有reversed方法,list.reversed----------------------------------------------
+
+
+
+#-------------------------------------------------------------------
+def huiwenQ(num):
+    string = str(num)
+    if string == string[::-1]:
+        return True
+    else:
+        return False
+
+result = 0
+
+for i in range(999, 99, -1):
+    for j in range(999, 99, -1):
+        product = i * j
+        if product > result and huiwenQ (product):
+            result = product
+print (result)
